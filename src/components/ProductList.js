@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from "react";
-import jsPDF from "jspdf";
-import html2canvas from "html2canvas";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation } from "swiper/modules";
-import "swiper/css/navigation";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
+import React, { useState, useEffect } from 'react';
+import jsPDF from 'jspdf';
+import html2canvas from 'html2canvas';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, Navigation } from 'swiper/modules';
+import 'swiper/css/navigation';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 
 // Import Swiper styles
-import "swiper/css";
-import { Data } from "../Data";
+import 'swiper/css';
+import { Data } from '../Data';
 
 export const ProductList = () => {
   const [cart, setCart] = useState([]);
@@ -18,19 +18,19 @@ export const ProductList = () => {
 
   const generateAndOpenPDF = () => {
     // Create a new jsPDF instance
-    const pdf = new jsPDF("p", "mm", "a4");
+    const pdf = new jsPDF('p', 'mm', 'a4');
 
     // Capture the HTML element containing your table
-    const tableElement = document.querySelector(".cart");
+    const tableElement = document.querySelector('.cart');
 
     // Use html2canvas to convert the table to an image
     html2canvas(tableElement).then((canvas) => {
       // Add the image (canvas) to the PDF
-      const imgData = canvas.toDataURL("image/png");
-      pdf.addImage(imgData, "PNG", 10, 10, 190, 0);
+      const imgData = canvas.toDataURL('image/png');
+      pdf.addImage(imgData, 'PNG', 10, 10, 190, 0);
 
       // Save the PDF with a unique name
-      const pdfName = "shopping_cart.pdf";
+      const pdfName = 'shopping_cart.pdf';
       pdf.save(pdfName);
     });
   };
@@ -65,7 +65,7 @@ export const ProductList = () => {
   useEffect(() => {
     const cost = cart.reduce(
       (acc, item) => acc + item.price * item.quantity,
-      0
+      0,
     );
     setTotalCost(cost);
   }, [cart]);
@@ -75,7 +75,7 @@ export const ProductList = () => {
       <div className="container d-flex flex-column align-items-center">
         <div className="container product-list-container d-flex align-items-center justify-content-center">
           <Swiper
-            modules={[Navigation, ]}
+            modules={[Navigation]}
             navigation
             spaceBetween={20}
             slidesPerView={4}
@@ -113,7 +113,10 @@ export const ProductList = () => {
                 </div>
                 <div className="d-flex flex-column align-items-center justify-content-center mt-2">
                   <h4>{product.title}</h4>
-                  <p>${product.price}</p>
+                  <p>
+                    $
+                    {product.price}
+                  </p>
                   <p>{product.discription}</p>
                   <button
                     type="button"
@@ -147,17 +150,21 @@ export const ProductList = () => {
                 <tr key={item.id}>
                   <td>{index + 1}</td>
                   <td>{item.title}</td>
-                  <td>${item.price}</td>
+                  <td>
+                    $
+                    {item.price}
+                  </td>
                   <td>
                     <input
                       type="number"
                       value={item.quantity}
-                      onChange={(e) =>
-                        updatedQuantity(item.id, parseInt(e.target.value))
-                      }
+                      onChange={(e) => updatedQuantity(item.id, parseInt(e.target.value))}
                     />
                   </td>
-                  <td>${item.price * item.quantity}</td>
+                  <td>
+                    $
+                    {item.price * item.quantity}
+                  </td>
                   <td>
                     <button onClick={() => removeFromCart(item.id)}>
                       Remove
@@ -167,7 +174,10 @@ export const ProductList = () => {
               ))}
             </tbody>
           </table>
-          <p>Total: ${totalCost}</p>
+          <p>
+            Total: $
+            {totalCost}
+          </p>
         </div>
         <button
           type="button"
