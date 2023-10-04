@@ -13,6 +13,19 @@ const ProductList = () => {
   const [cart, setCart] = useState([]);
   const [totalCost, setTotalCost] = useState(0);
 
+  // Load cart data from local storage when the component mounts
+  useEffect(() => {
+    const storedCart = JSON.parse(localStorage.getItem('cart'));
+    if (storedCart) {
+      setCart(storedCart);
+    }
+  }, []);
+
+  // Save cart data to local storage whenever the cart changes
+  useEffect(() => {
+    localStorage.setItem('cart', JSON.stringify(cart));
+  }, [cart]);
+
   const generateAndOpenPDF = () => {
     // Create a new jsPDF instance
     const pdfFile = new JsPDF('p', 'mm', 'a4');
