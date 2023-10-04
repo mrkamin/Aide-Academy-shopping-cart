@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import jsPDF from 'jspdf';
+import JsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation } from 'swiper/modules';
@@ -7,18 +7,15 @@ import 'swiper/css/navigation';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import Data from '../Data';
 
-// Import Swiper styles
-import 'swiper/css';
-import { Data } from '../Data';
-
-export const ProductList = () => {
+const ProductList = () => {
   const [cart, setCart] = useState([]);
   const [totalCost, setTotalCost] = useState(0);
 
   const generateAndOpenPDF = () => {
     // Create a new jsPDF instance
-    const pdf = new jsPDF('p', 'mm', 'a4');
+    const pdfFile = new JsPDF('p', 'mm', 'a4');
 
     // Capture the HTML element containing your table
     const tableElement = document.querySelector('.cart');
@@ -27,11 +24,11 @@ export const ProductList = () => {
     html2canvas(tableElement).then((canvas) => {
       // Add the image (canvas) to the PDF
       const imgData = canvas.toDataURL('image/png');
-      pdf.addImage(imgData, 'PNG', 10, 10, 190, 0);
+      pdfFile.addImage(imgData, 'PNG', 10, 10, 190, 0);
 
       // Save the PDF with a unique name
       const pdfName = 'shopping_cart.pdf';
-      pdf.save(pdfName);
+      pdfFile.save(pdfName);
     });
   };
 
@@ -55,7 +52,7 @@ export const ProductList = () => {
   const updatedQuantity = (productId, newQuantity) => {
     const updatedCart = cart.map((item) => {
       if (item.id === productId) {
-        item.quantity = newQuantity;
+        return { ...item, quantity: newQuantity };
       }
       return item;
     });
@@ -158,7 +155,7 @@ export const ProductList = () => {
                     <input
                       type="number"
                       value={item.quantity}
-                      onChange={(e) => updatedQuantity(item.id, parseInt(e.target.value))}
+                      onChange={(e) => updatedQuantity(item.id, parseInt(e.target.value, 10))}
                     />
                   </td>
                   <td>
@@ -166,7 +163,7 @@ export const ProductList = () => {
                     {item.price * item.quantity}
                   </td>
                   <td>
-                    <button onClick={() => removeFromCart(item.id)}>
+                    <button type="button" onClick={() => removeFromCart(item.id)}>
                       Remove
                     </button>
                   </td>
@@ -190,3 +187,5 @@ export const ProductList = () => {
     </div>
   );
 };
+
+export default ProductList;

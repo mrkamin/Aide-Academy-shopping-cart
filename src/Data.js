@@ -1,4 +1,4 @@
-export const Data = [
+const Data = [
   {
     id: 1,
     title: 'Apple Watch',
@@ -98,3 +98,5 @@ export const Data = [
     },
   },
 ];
+
+export default Data;
