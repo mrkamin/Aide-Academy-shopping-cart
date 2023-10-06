@@ -1,3 +1,4 @@
+// import dependancies and external libraries
 import React, { useState, useEffect } from 'react';
 import JsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
@@ -10,8 +11,11 @@ import 'swiper/css/scrollbar';
 import Data from '../Data';
 
 const ProductList = () => {
+  // The component uses the React useState hook to manage two pieces of state:
   const [cart, setCart] = useState([]);
+  // An array that holds the selected products in the shopping cart.
   const [totalCost, setTotalCost] = useState(0);
+  // A number representing the total cost of the items in the cart.
 
   // Load cart data from local storage when the component mounts
   useEffect(() => {
@@ -193,7 +197,10 @@ const ProductList = () => {
                     {item.price * item.quantity}
                   </td>
                   <td>
-                    <button type="button" onClick={() => removeFromCart(item.id)}>
+                    <button
+                      type="button"
+                      onClick={() => removeFromCart(item.id)}
+                    >
                       Remove
                     </button>
                   </td>
