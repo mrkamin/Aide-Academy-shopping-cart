@@ -3,7 +3,7 @@ const Data = [
     id: 1,
     title: 'Apple Watch',
     price: '399',
-    discription: 'All Apple Watch Series 9 cases are swimproof and dustproof',
+    discription: 'All Apple Watch Series 9 cases are swimproof',
     category: 'watch',
     image: {
       url1: 'https://res.cloudinary.com/dagjuuf4v/image/upload/v1696377329/Aide%20Academy/Appel/watch/apple-watch-series-9_zhixja.jpg',
@@ -40,7 +40,7 @@ const Data = [
     id: 4,
     title: 'Galaxy A14',
     price: '999',
-    discription: 'Awesome Signature Design 6.6 FHD+ Rear Cam: 50MP Main',
+    discription: 'Awesome Signature Design 6.6 FHD+ Rear Cam: 50MP',
     category: 'phone',
     image: {
       url1: 'https://res.cloudinary.com/dagjuuf4v/image/upload/v1696420510/Aide%20Academy/Sumssung/A143_pvvhvs.jpg',
@@ -52,7 +52,7 @@ const Data = [
     id: 5,
     title: 'Apple Watch',
     price: '399',
-    discription: 'All Apple Watch Series 9 cases are swimproof and dustproof',
+    discription: 'All Apple Watch Series 9 cases are swimproof',
     category: 'watch',
     image: {
       url1: 'https://res.cloudinary.com/dagjuuf4v/image/upload/v1696377329/Aide%20Academy/Appel/watch/apple-watch-series-9_zhixja.jpg',
@@ -89,7 +89,7 @@ const Data = [
     id: 8,
     title: 'Galaxy A14',
     price: '999',
-    discription: 'Awesome Signature Design 6.6 FHD+ Rear Cam: 50MP Main',
+    discription: 'Awesome Signature Design 6.6 FHD+ Rear Cam: 50MP',
     category: 'phone',
     image: {
       url1: 'https://res.cloudinary.com/dagjuuf4v/image/upload/v1696420510/Aide%20Academy/Sumssung/A143_pvvhvs.jpg',
