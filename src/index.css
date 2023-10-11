@@ -51,11 +51,11 @@ p {
   border-radius: 1rem;
 }
 
+.mySwiper {
+  height: 40vh;
+}
 .product-list-container {
-  height: 80vh;
   gap: 1rem;
-
-  /* background-color: #61dafb; */
   border-radius: 0.5rem;
 }
 
@@ -67,5 +67,14 @@ p {
 }
 
 .swiper-contatiner {
-  height: 80vh;
+  height: 65vh;
+}
+
+.swiper-pagination {
+  position: static !important;
+}
+
+.swiper-pagination-bullet {
+  width: 15px !important;
+  height: 15px !important;
 }

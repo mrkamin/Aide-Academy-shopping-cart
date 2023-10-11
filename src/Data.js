@@ -18,17 +18,17 @@ const Data = [
     discription: 'Inspired by the best of Apple. Transformed by the M1 chip.',
     category: 'Laptop',
     image: {
-      url1: 'https://res.cloudinary.com/dagjuuf4v/image/upload/v1696419887/Aide%20Academy/Appel/laptop/Mac_pro_1_qpou9v.jpg',
+      url4: 'https://res.cloudinary.com/dagjuuf4v/image/upload/v1696419887/Aide%20Academy/Appel/laptop/Mac_pro_1_qpou9v.jpg',
       url2: 'https://res.cloudinary.com/dagjuuf4v/image/upload/v1696419886/Aide%20Academy/Appel/laptop/Imac4_okuxh2.jpg',
       url3: 'https://res.cloudinary.com/dagjuuf4v/image/upload/v1696419885/Aide%20Academy/Appel/laptop/Imac_2_o7j4nf.jpg',
-      url4: 'https://res.cloudinary.com/dagjuuf4v/image/upload/v1696419885/Aide%20Academy/Appel/laptop/Imac3_neynoq.jpg',
+      url1: 'https://res.cloudinary.com/dagjuuf4v/image/upload/v1696419885/Aide%20Academy/Appel/laptop/Imac3_neynoq.jpg',
     },
   },
   {
     id: 3,
     title: 'XPS Laptops',
     price: '1199',
-    discription: 'Power your creativity with premium,',
+    discription: 'Power your creativity with premium, wather prof',
     category: 'Laptop',
     image: {
       url1: 'https://res.cloudinary.com/dagjuuf4v/image/upload/v1696420172/Aide%20Academy/Dell/Laptop/delllaptop1_p3apxv.jpg',
@@ -67,17 +67,17 @@ const Data = [
     discription: 'Inspired by the best of Apple. Transformed by the M1 chip.',
     category: 'Laptop',
     image: {
-      url1: 'https://res.cloudinary.com/dagjuuf4v/image/upload/v1696419887/Aide%20Academy/Appel/laptop/Mac_pro_1_qpou9v.jpg',
+      url4: 'https://res.cloudinary.com/dagjuuf4v/image/upload/v1696419887/Aide%20Academy/Appel/laptop/Mac_pro_1_qpou9v.jpg',
       url2: 'https://res.cloudinary.com/dagjuuf4v/image/upload/v1696419886/Aide%20Academy/Appel/laptop/Imac4_okuxh2.jpg',
       url3: 'https://res.cloudinary.com/dagjuuf4v/image/upload/v1696419885/Aide%20Academy/Appel/laptop/Imac_2_o7j4nf.jpg',
-      url4: 'https://res.cloudinary.com/dagjuuf4v/image/upload/v1696419885/Aide%20Academy/Appel/laptop/Imac3_neynoq.jpg',
+      url1: 'https://res.cloudinary.com/dagjuuf4v/image/upload/v1696419885/Aide%20Academy/Appel/laptop/Imac3_neynoq.jpg',
     },
   },
   {
     id: 7,
     title: 'XPS Laptops',
     price: '1199',
-    discription: 'Power your creativity with premium,',
+    discription: 'Power your creativity with premium, wather prof',
     category: 'Laptop',
     image: {
       url1: 'https://res.cloudinary.com/dagjuuf4v/image/upload/v1696420172/Aide%20Academy/Dell/Laptop/delllaptop1_p3apxv.jpg',

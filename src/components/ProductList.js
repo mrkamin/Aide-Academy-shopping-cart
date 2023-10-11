@@ -127,20 +127,20 @@ const ProductList = () => {
                 slidesPerView: 1,
               },
             }}
-            className="swiper-contatiner"
+            className="swiper-contatiner d-flex flex-columns gap-3"
           >
             {Data.map((product) => (
               <SwiperSlide
                 key={product.id}
-                className="d-flex flex-column justify-content-center product-items"
+                className="d-flex flex-column justify-content-between product-items "
               >
-                <div className="product-slider d-flex align-items-center justify-content-center">
+                <div className="product-slider d-flex align-items-center ">
                   <Swiper
                     pagination={{
                       clickable: true,
                     }}
                     modules={[Pagination]}
-                    className="mySwiper"
+                    className="mySwiper d-flex flex-column justify-content-between"
                   >
                     {product.image.url1 && (
                       <SwiperSlide>
