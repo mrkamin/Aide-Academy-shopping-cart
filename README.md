@@ -36,7 +36,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Github](https://shopping-u6pn.onrender.com)
+- [Render](https://shopping-u6pn.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
